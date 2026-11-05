@@ -1,0 +1,49 @@
+services:
+  db:
+    image: mariadb:lts
+    environment:
+      MARIADB_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:?}
+      MARIADB_DATABASE: ${DB_NAME:?}
+      MARIADB_USER: ${DB_USER:?}
+      MARIADB_PASSWORD: ${DB_PASS:?}
+    ports:
+      - "127.0.0.1:${DB_PORT:-3306}:3306"
+    volumes:
+      - db-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  backend:
+    build: .
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "${BACKEND_PORT:-8080}:80"
+    environment:
+      docker: "1"
+      APP_DEBUG: ${APP_DEBUG:-1}
+      DB_HOST: db
+      DB_PORT: 3306
+      DB_DATABASE: ${DB_DATABASE}
+      DB_USERNAME: ${DB_USERNAME}
+      DB_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - ./backend:/var/www/html
+
+#  frontend:
+#    build: ./frontend
+#    ports:
+#      - "${FRONTEND_PORT:-5173}:5173"
+#    environment:
+#      VITE_API_URL: http://localhost:${BACKEND_PORT:-8080}
+#    volumes:
+#      - ./frontend:/app
+#      - frontend-node-modules:/app/node_modules
+
+volumes:
+  db-data:
+#  frontend-node-modules:

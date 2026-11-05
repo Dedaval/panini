@@ -1,0 +1,24 @@
+# Changelog
+
+## 08.10.2026
+* Documentation PDF
+
+## 15.10.2026
+
+* Initialisé le projet avec composer (environ 13 minutes)
+* Régler un problème avec l'installation de dotenv avec composer (15 minutes)
+* Commencer le README.md (environ 2 minutes)
+* Commencer le diagramme de classe (environ 15 minutes)
+* Génerer un teamplate de diagramme de Gantt (environ 80 minutes)
+
+### _Conclusion_
+J'ai pu faire un teamplate de diagramme de Gantt quasiment parfait, juste avec 2 bugs:
+* on ne peux pas changer le background 1 jour sur 2
+* les heures disponibles ne se calcule pas dynamiquement 
+
+## 05.11.2026
+
+* Essayer de faire le fichier .local, mais je n'ai pas reussi
+* Faire le Gantt
+* Suivre le tutoriel et faire le model, view, controller pour card
+* Faire une version 1 pour le sql
