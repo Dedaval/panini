@@ -22,3 +22,7 @@ J'ai pu faire un teamplate de diagramme de Gantt quasiment parfait, juste avec 2
 * Faire le Gantt
 * Suivre le tutoriel et faire le model, view, controller pour card
 * Faire une version 1 pour le sql
+* Terminer la structure MVC du projet
+
+### _Conclusion_
+Je n'ai pas modifié les erreurs du template du modèle de Gantt, car je n'ai pas suffisement de temps. J'ai pu suivre le tutoriel pour avoir une bonne base selon mes besoins. Le prochain cours, je ferai au début du cours le diagramme de classe
