@@ -1,6 +1,6 @@
 services:
   db:
-    image: mariadb:lts
+    image: mariadb:12.3
     environment:
       MARIADB_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:?}
       MARIADB_DATABASE: ${DB_NAME:?}
@@ -10,6 +10,7 @@ services:
       - "127.0.0.1:${DB_PORT:-3306}:3306"
     volumes:
       - db-data:/var/lib/mysql
+      - ./config/db/init.sql:/docker-entrypoint-initdb.d/init.sql
     healthcheck:
       test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
       interval: 5s
@@ -24,26 +25,16 @@ services:
     ports:
       - "${BACKEND_PORT:-8080}:80"
     environment:
-      docker: "1"
+      APP_NAME: ${APP_NAME:-Foot Panini}
       APP_DEBUG: ${APP_DEBUG:-1}
       DB_HOST: db
       DB_PORT: 3306
-      DB_DATABASE: ${DB_DATABASE}
-      DB_USERNAME: ${DB_USERNAME}
-      DB_PASSWORD: ${DB_PASSWORD}
+      DB_NAME: ${DB_NAME}
+      DB_USER: ${DB_USER}
+      DB_PASS: ${DB_PASS}
     volumes:
-      - ./backend:/var/www/html
-
-#  frontend:
-#    build: ./frontend
-#    ports:
-#      - "${FRONTEND_PORT:-5173}:5173"
-#    environment:
-#      VITE_API_URL: http://localhost:${BACKEND_PORT:-8080}
-#    volumes:
-#      - ./frontend:/app
-#      - frontend-node-modules:/app/node_modules
+      - ./src:/var/www/html/src
+      - ./public:/var/www/html/public
 
 volumes:
   db-data:
-#  frontend-node-modules:

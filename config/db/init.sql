@@ -1,8 +1,3 @@
-DROP DATABASE IF EXISTS db_panini;
-
-CREATE DATABASE db_panini;
-USE db_panini;
-
 CREATE TABLE users (
     user_id INT PRIMARY KEY AUTO_INCREMENT,
     username VARCHAR(50) NOT NULL UNIQUE,
