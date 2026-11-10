@@ -30,5 +30,5 @@ Je n'ai pas modifié les erreurs du template du modèle de Gantt, car je n'ai pa
 ## 10.11.2026
 
 * Corriger le docker
-
+* Corriger d'autres bugs
 ### _Conclusion_

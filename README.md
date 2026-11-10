@@ -5,7 +5,7 @@
 1.  Copy the file .env and fill it
 
 ```bash
-    cp .env.example .env
+    cp ./config/env/env.conf .env
 ```
 
 2. Start the app
