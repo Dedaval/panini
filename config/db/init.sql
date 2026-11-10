@@ -38,3 +38,11 @@ CREATE TABLE user_collections (
     FOREIGN KEY (album_id) REFERENCES albums(album_id) ON DELETE CASCADE,
     UNIQUE KEY (user_id, album_id)
 );
+
+INSERT INTO albums (name, description, year) VALUES
+('FIFA World Cup 2026', 'Album officiel de la Coupe du Monde', 2026);
+
+INSERT INTO cards (album_id, name, number) VALUES
+(1, 'Kylian Mbappé', 1),
+(1, 'Erling Haaland', 2),
+(1, 'Vinicius Jr', 3);

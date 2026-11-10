@@ -26,3 +26,9 @@ J'ai pu faire un teamplate de diagramme de Gantt quasiment parfait, juste avec 2
 
 ### _Conclusion_
 Je n'ai pas modifié les erreurs du template du modèle de Gantt, car je n'ai pas suffisement de temps. J'ai pu suivre le tutoriel pour avoir une bonne base selon mes besoins. Le prochain cours, je ferai au début du cours le diagramme de classe
+
+## 10.11.2026
+
+* Corriger le docker
+
+### _Conclusion_
