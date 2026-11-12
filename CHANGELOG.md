@@ -31,4 +31,15 @@ Je n'ai pas modifié les erreurs du template du modèle de Gantt, car je n'ai pa
 
 * Corriger le docker
 * Corriger d'autres bugs
+
 ### _Conclusion_
+J ai corriger les bugs pour pouvoir coder mon app de facon optimal
+
+## 12.11.2026
+
+* Faire le README pour windows
+* Changer l'endroit ou se trouve le copy pour le vhost pour le mettre dans le docker-compose
+* Commencer la factory des models
+
+### _Conclusion_
+J ai corriger les bugs pour pouvoir coder mon app de facon optimal
