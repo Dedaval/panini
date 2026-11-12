@@ -35,6 +35,7 @@ services:
     volumes:
       - ./src:/var/www/html/src:z
       - ./public:/var/www/html/public:z
+      - ./config/vhost/panini.local.conf:/etc/apache2/sites-enabled/000-default.conf
 
 volumes:
   db-data:

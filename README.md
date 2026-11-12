@@ -6,6 +6,7 @@
 
 ```bash
     cp ./config/env/env.conf .env
+    code .env
 ```
 
 2. Start the app
