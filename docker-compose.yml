@@ -23,7 +23,7 @@ services:
       db:
         condition: service_healthy
     ports:
-      - "${BACKEND_PORT:-8080}:80"
+      - "${BACKEND_PORT:-80}:80"
     environment:
       APP_NAME: ${APP_NAME:-Foot Panini}
       APP_DEBUG: ${APP_DEBUG:-1}
