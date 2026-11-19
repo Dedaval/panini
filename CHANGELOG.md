@@ -43,3 +43,10 @@ J ai corriger les bugs pour pouvoir coder mon app de facon optimal
 
 ### _Conclusion_
 J ai corriger les bugs pour pouvoir coder mon app de facon optimal
+
+## 19.11.2026
+
+* Termine basemdoel
+
+### _Conclusion_
+
