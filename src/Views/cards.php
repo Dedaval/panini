@@ -6,6 +6,6 @@ use App\Models\Cards;
 <h1>Cards</h1>
 <ul>
 <?php foreach ($cards as $card): ?>
-    <li><a href="/cards/<?= $card->getCardId() ?>"><?= htmlspecialchars($card->getAlbumId() )?></a></li>
+    <li><a href="/cards/<?= $card->getId() ?>"><?= htmlspecialchars($card->getName() )?></a></li>
 <?php endforeach; ?>
 </ul>

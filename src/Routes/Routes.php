@@ -5,5 +5,6 @@ use Slim\App;
 
 return function (App $app) {
     $app->get('/', [AccueilController::class, 'index']);
-    $app->get('/cards', [CardsController::class, 'getAllEquipes']);
+    $app->get('/cards', [CardsController::class, 'getAllCards']);
+    $app->get('/cards/{id}', [CardsController::class, 'getCardWithId']);
 };
