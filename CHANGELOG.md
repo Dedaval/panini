@@ -46,7 +46,8 @@ J ai corriger les bugs pour pouvoir coder mon app de facon optimal
 
 ## 19.11.2026
 
-* Termine basemdoel
+* Terminer ModelFactory
+* Faire Model/Card
 
 ### _Conclusion_
 
