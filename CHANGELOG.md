@@ -48,6 +48,7 @@ J ai corriger les bugs pour pouvoir coder mon app de facon optimal
 
 * Terminer ModelFactory
 * Faire Model/Card
+* Faire la vue de card
 
 ### _Conclusion_
-
+Finir ce qui est en lien avec card. Meme si faudrait faire une meilleur vue
